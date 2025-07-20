@@ -24,4 +24,6 @@ better_fit = 2
 '''
 We can think about loss as the squared distance from the point to the line. We do the squared distance (instead of just the distance) so that points above and below the line both contribute to total loss in the same wayWe can think about loss as the squared distance from the point to the line. We do the squared distance (instead of just the distance) so that points above and below the line both contribute to total loss in the same way
 
+Minimizing Loss
+The goal of a linear regression model is to find the slope and intercept pair that minimizes loss on average across all of the data.
 '''
