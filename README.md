@@ -16,3 +16,10 @@
       - Natural Log Transformation => Operable Right skewed data
     - Encoding Categorical Variables
     - Project : Transforming Data into features
+  - Supervised Learning I: Regressors, Classifiers and Trees
+    - Regression vs Classification
+      - Regression: Regression is used to predict outputs that are continuous. The outputs are quantities that can be flexibly determined based on the inputs of the model rather than being confined to a set of possible labels.
+      - Classification : Classification is used to predict a discrete label. The outputs fall under a finite set of possible outcomes.\
+        - Classification types : Binary Classification, Multi-class classification
+        
+    - 
