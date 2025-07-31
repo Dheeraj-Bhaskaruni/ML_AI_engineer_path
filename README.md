@@ -21,5 +21,20 @@
       - Regression: Regression is used to predict outputs that are continuous. The outputs are quantities that can be flexibly determined based on the inputs of the model rather than being confined to a set of possible labels.
       - Classification : Classification is used to predict a discrete label. The outputs fall under a finite set of possible outcomes.\
         - Classification types : Binary Classification, Multi-class classification
-        
+    - Linear Regression
+      - Linear Regression 
+      - Introduction to Linear Regression
+      - Points and Lines
+      - Loss
+      - Minimizing Loss
+      - Gradient Descent for Intercept 
+      - Gradient Descent for Slope
+      - Put it Together 
+      - Convergence 
+      - Learning Rate 
+      - Put it Together II 
+      - Use Your Functions on Real Data 
+      - Scikit-Learn
+    - Project: Honey Production
+    - Multiple Linear Regression
     - 
