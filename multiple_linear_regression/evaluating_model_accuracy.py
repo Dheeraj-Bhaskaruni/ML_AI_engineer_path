@@ -4,6 +4,11 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 
+import matplotlib
+
+matplotlib.use("TkAgg")
+
+
 streeteasy = pd.read_csv("https://raw.githubusercontent.com/sonnynomnom/Codecademy-Machine-Learning-Fundamentals/master/StreetEasy/manhattan.csv")
 
 df = pd.DataFrame(streeteasy)
