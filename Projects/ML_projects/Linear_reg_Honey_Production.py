@@ -44,7 +44,7 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 import matplotlib
 import matplotlib.pyplot as plt
-df = pd.read_csv('/Users/dheeraj_bhaskaruni/Documents/Prep/ML_AI_engineer_path/datasets/honeyproduction.csv')
+df = pd.read_csv('/datasets/honeyproduction.csv')
 matplotlib.use("TkAgg")
 prod_per_year = df.groupby('year').totalprod.mean().reset_index()
 

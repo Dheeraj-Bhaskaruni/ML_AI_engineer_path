@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 
-csv_path = "/Users/dheeraj_bhaskaruni/Documents/Prep/ML_AI_engineer_path/datasets/manhattan.csv"
+csv_path = "/datasets/manhattan.csv"
 streeteasy = pd.read_csv(csv_path)
 
 X = streeteasy[['size_sqft', 'building_age_yrs']]
