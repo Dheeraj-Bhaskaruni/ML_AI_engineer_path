@@ -16,3 +16,4 @@ product = -1
 product = reduce(lambda x,y: x*y, map(lambda x:x+5,filter(lambda x:x<10, nums)))
 
 print(product)
+
