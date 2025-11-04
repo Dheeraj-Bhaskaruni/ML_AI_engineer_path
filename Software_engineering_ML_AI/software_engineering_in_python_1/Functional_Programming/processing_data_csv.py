@@ -17,3 +17,4 @@ with open('trees.csv', newline='') as csvfile:
     print('......')
     widest = reduce(lambda x, y: x if x.width > y.width else y, trees)
     print(widest)
+
