@@ -18,3 +18,90 @@ file paths
 Preview: Docs Loading link description
 . It is customized in advanced cases.
 env returns a list of environment variables. You can redirect the output, using grep to select the variable you want to see.
+
+
+'''
+$ pwd
+/home/ccuser/workspace/clothing
+$ touch hello.txt
+$ nano hello.txt
+$ nano .bash_profile
+$ ls -a
+.   dresses.txt  jackets.txt  scarves.txt  socks.txt
+..  hello.txt    pants.txt    shirts.txt   sweaters.txt
+$ nano .bash_profile
+$ source .bash_profile
+bash: Hello: command not found
+$ nano .bash_profile
+$ nano .bash_profile
+$ source .bash_profile
+bash: Hello: command not found
+$ nano .bash_profile
+$ source .bash_profile
+Hello
+$ nano .bash_profile
+$ source .bash_profile
+Hello
+$ p
+/home/ccuser/workspace/clothing
+$ lll
+bash: lll: command not found
+$ ll
+total 8
+drwxr-xr-x 2 ccuser ccuser 173 Nov  6 23:11 .
+drwxr-xr-x 1 ccuser ccuser  22 Nov  6 23:08 ..
+-rw-r--r-- 1 ccuser ccuser  46 Nov  6 23:11 .bash_profile
+-rw-r--r-- 1 ccuser ccuser   0 Nov  6 23:08 dresses.txt
+-rw-r--r-- 1 ccuser ccuser  17 Nov  6 23:09 hello.txt
+-rw-r--r-- 1 ccuser ccuser   0 Nov  6 23:08 jackets.txt
+-rw-r--r-- 1 ccuser ccuser   0 Nov  6 23:08 pants.txt
+-rw-r--r-- 1 ccuser ccuser   0 Nov  6 23:08 scarves.txt
+-rw-r--r-- 1 ccuser ccuser   0 Nov  6 23:08 shirts.txt
+-rw-r--r-- 1 ccuser ccuser   0 Nov  6 23:08 socks.txt
+-rw-r--r-- 1 ccuser ccuser   0 Nov  6 23:08 sweaters.txt
+$ nano .bash_profile
+$ $USER
+$
+$ USER
+bash: USER: command not found
+$ echo $USER
+
+$ source .bash_profile
+Hello
+$ echo $USER
+new
+$ nano .bash_profile
+$ source .bash_profile
+Hello
+>> echo $home
+
+>>
+>> echo $HOME
+/home/ccuser
+>> echo $PATH
+/home/ccuser/.bin:/home/ccuser/node_modules/.bin:/home/ccuser/.gem/ruby/2.3.0/bin:/home/ccuser/.composer/vendor/bin:/home/ccuser/.bin:/home/ccuser/node_modules/.bin:/home/ccuser/.gem/ruby/2.3.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+>> env
+HOSTNAME=017eb2250939
+GEM_HOME=/home/ccuser/.gem/ruby/2.3.0
+TERM=xterm
+USER=new
+EXPIRES_AT=1762474111
+NLTK_DATA=/home/ccuser/.nltk_data
+PATH=/home/ccuser/.bin:/home/ccuser/node_modules/.bin:/home/ccuser/.gem/ruby/2.3.0/bin:/home/ccuser/.composer/vendor/bin:/home/ccuser/.bin:/home/ccuser/node_modules/.bin:/home/ccuser/.gem/ruby/2.3.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+CODEX_RUNNER_PATH=/var/codecademy/codex/runners
+PWD=/home/ccuser/workspace/clothing
+MPLBACKEND=agg
+LANG=en_US.UTF-8
+SESSION_ID=aa6a074b-59e8-49e9-ae73-ddecb54f64de
+TZ=Etc/UTC
+PS1=>>
+SHLVL=1
+HOME=/home/ccuser
+LOG_LEVEL=2
+WORKSPACE_SERVICE_HOST=https://workspace.production-eks.codecademy.com
+EIN_IMAGE=default
+PYTHONPATH=/var/codecademy/runner_contexts/python:
+_=/usr/bin/env
+>> ^C
+>>
+'''
