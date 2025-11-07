@@ -103,5 +103,4 @@ EIN_IMAGE=default
 PYTHONPATH=/var/codecademy/runner_contexts/python:
 _=/usr/bin/env
 >> ^C
->>
 '''
