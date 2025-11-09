@@ -1,0 +1,18 @@
+To better understand git reset commit_SHA, notice the diagram on the right. Each circle represents a commit.
+
+Before reset:
+
+HEAD is at the most recent commit
+After resetting:
+
+HEAD goes to a previously made commit of your choice
+The gray commits are no longer part of your project
+You have in essence rewound the project’s history
+
+
+
+git checkout HEAD filename: Discards changes in the working directory.
+git reset HEAD filename: Unstages file changes in the staging area.
+git reset commit_SHA: Resets to a previous commit in your commit history.
+Additionally, you learned a way to add multiple files to the staging area with a single command:
+
