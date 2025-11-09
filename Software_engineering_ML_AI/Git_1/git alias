@@ -1,0 +1,24 @@
+Git alias commands
+When grouping commands together, you can end up writing very long lines of Git commands in the terminal such as:
+
+$ git log --pretty=format:"%h %s" --graph
+
+Fortunately, Git offers a helpful feature that can make your Git experience simpler, easier, and more familiar: aliases.
+
+If you have a set of commands that you use regularly and want to save some time from typing them, you can easily set up an alias for each command using Git config.
+
+Below are a couple of examples:
+
+$ git config --global alias.co "checkout"
+$ git config --global alias.br "branch"
+$ git config --global alias.glop "log --pretty=format:"%h %s" --graph"
+
+Once the aliases are configured, next time you want to check out to another branch you could type the command:
+
+$ git co example_branch
+
+Instead of:
+
+$ git checkout example_branch
+
+Using Git aliases can create a much more fluid and efficient workflow experience when using Git. By getting creative with your aliases, you’re able to wrap a sequence of Git commands into one in order to save time and effort.
