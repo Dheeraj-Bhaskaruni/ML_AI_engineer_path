@@ -1,0 +1,12 @@
+Git commit amend
+Git’s --amend flag is extremely useful when updating a commit, it allows you to correct mistakes and edit commits easily instead of creating a completely new one.
+
+Let’s say you finish working on a lengthy feature and everything seems to be working fine so you commit your work. Shortly after, you realize you missed a few semicolons in one of your functions. You could technically create a new commit, but ideally, you want to keep all commits specific, clean, and succinct. To avoid creating a new one, you could create your changes, stage them with git add and then type the command git commit --amend to update your previous commit.
+
+It’s important to note that although it seems like --amend is simply updating the commit, what Git actually does is replace the whole previous commit. For this reason, when you execute the command git commit --amend, your terminal editor asks you to update your commit message:
+
+git-amend
+
+However, if you want to keep the same commit message, you can simply add the flag --no-edit:
+
+$ git commit --amend --no-edit
