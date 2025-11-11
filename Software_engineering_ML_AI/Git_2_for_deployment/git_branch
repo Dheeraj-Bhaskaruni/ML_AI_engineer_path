@@ -1,0 +1,43 @@
+git branch
+# to get in which branch you are in
+
+git branch new_branch
+# create a new branch
+
+git checkout new_branch
+# switch from one to another
+
+git merge branch_name
+# merge with master
+
+
+
+'''
+$ git add resume.txt
+$ git branch
+  fencing
+* master
+  new_branch
+$ git commit -m 'u['
+[master b4db996] u[
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+$ git checkout fencing
+Switched to branch 'fencing'
+$ git add resume.txt
+$ git commit -m 'up'
+[fencing e18a79d] up
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+$ git checkout master
+Switched to branch 'master'
+$ git merge fencing
+Auto-merging resume.txt
+CONFLICT (content): Merge conflict in resume.txt
+Automatic merge failed; fix conflicts and then commit the result.
+$ git add resume.txt
+$ git commit -m 'resolving merge conflict'
+[master aa04578] resolving merge conflict
+$
+'''
+
+git branch -d branch_name
+# delete branch name

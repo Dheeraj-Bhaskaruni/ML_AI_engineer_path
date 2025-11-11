@@ -1,0 +1,10 @@
+<>/git clone remote_location clone_name
+
+git remote -v
+You can see a list of a Git project’s remotes with the command
+
+git fetch
+An easy way to see if changes have been made to the remote and bring the changes down to your local copy is with
+
+git push origin <your_branch_name>
+will push your branch up to the remote, origin.
