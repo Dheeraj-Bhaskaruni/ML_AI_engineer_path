@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 from sklearn.tree import DecisionTreeClassifier
 from sklearn import tree
 
+
 #https://archive.ics.uci.edu/ml/machine-learning-databases/flags/flag.data
 cols = ['name','landmass','zone', 'area', 'population', 'language','religion','bars','stripes','colours',
 'red','green','blue','gold','white','black','orange','mainhue','circles',
@@ -37,7 +38,7 @@ print(labels)
 data = pd.get_dummies(df_36['mainhue'])
 
 #Split data into a train and test set
-
+x_train,x_test,y_train,y_test = test_train_split(data, labels, random_state=1,test_size=0.4)
 
 #Fit a decision tree for max_depth values 1-20; save the accuracy score in acc_depth
 depths = range(1, 21)
