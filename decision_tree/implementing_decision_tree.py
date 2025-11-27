@@ -53,22 +53,47 @@ plt.ylabel('accuracy')
 plt.show()
 
 #Find the largest accuracy and the depth this occurs
-
+max_acc = np.max(acc_depth)
+best_depth = depths[np.argmax(acc_depth)]
+print(f'Highest accuracy {round(max_acc,3)*100}% at depth {best_depth}')
 
 #Refit decision tree model with the highest accuracy and plot the decision tree
-
+plt.figure(figsize=(14,8))
+dt = DecisionTreeClassifier(random_state = 1, max_depth = best_depth)
+dt.fit(train_data, train_labels)
+tree.plot_tree(dt, feature_names = train_data.columns,
+               class_names = ['Europe', 'Oceania'],
+                filled=True)
+plt.show()
 
 #Create a new list for the accuracy values of a pruned decision tree.  Loop through
 #the values of ccp and append the scores to the list
+acc_pruned = []
+ccp = np.logspace(-3, 0, num=20)
+for i in ccp:
+    dt_prune = DecisionTreeClassifier(random_state = 1, max_depth = best_depth, ccp_alpha=i)
+    dt_prune.fit(train_data, train_labels)
+    acc_pruned.append(dt_prune.score(test_data, test_labels))
 
-
-#Plot the accuracy vs ccp_alpha
-
+plt.plot(ccp, acc_pruned)
+plt.xscale('log')
+plt.xlabel('ccp_alpha')
+plt.ylabel('accuracy')
+plt.show()
 
 #Find the largest accuracy and the ccp value this occurs
+max_acc_pruned = np.max(acc_pruned)
+best_ccp = ccp[np.argmax(acc_pruned)]
 
+print(f'Highest accuracy {round(max_acc_pruned,3)*100}% at ccp_alpha {round(best_ccp,4)}')
 
 #Fit a decision tree model with the values for max_depth and ccp_alpha found above
-
+dt_final = DecisionTreeClassifier(random_state = 1, max_depth = best_depth, ccp_alpha=best_ccp)
+dt_final.fit(train_data, train_labels)
 
 #Plot the final decision tree
+plt.figure(figsize=(14,8))
+tree.plot_tree(dt_final, feature_names = train_data.columns,
+               class_names = ['Europe', 'Oceania'],
+                filled=True)
+plt.show()
