@@ -1,0 +1,20 @@
+The goal of clustering is to separate data so that data similar to one another are in the same group, while data different from one another are in different groups. So two questions arise:
+
+How many groups do we choose?
+How do we define similarity?
+k-means is the most popular and well-known clustering
+algorithm
+Preview: Docs An algorithm is a formal process used to solve a problem. They can be represented in several formats but are usually represented in pseudocode in order to communicate the process by which the algorithms solve the problems they were created to tackle.
+, and it tries to address these two questions.
+
+The “k” refers to the number of clusters (groups) we expect to find in a dataset.
+The “Means” refers to the average distance of data to each cluster center, also known as the centroid, which we are trying to minimize.
+It is an iterative approach:
+
+Place k random centroids for the initial clusters.
+Assign data samples to the nearest centroid.
+Calculate new centroids based on the above-assigned data samples.
+Repeat Steps 2 and 3 until convergence.
+Convergence occurs when points don’t move between clusters and centroids stabilize. This iterative process of updating clusters and centroids is called training.
+
+Once we are happy with our clusters, we can take a new unlabeled datapoint and quickly assign it to the appropriate cluster. This is called inference.
